@@ -1,16 +1,16 @@
-module ModuloDisp(TOM_module, NOTAS, Saida_A, Saida_B, Saida_C, Saida_D, Saida_E, Saida_F, Saida_G);
+module ModuloDisp(TOM_module, NOTAS, SAIDA);
 
     input wire TOM_module;
     input wire [2:0] NOTAS;
-    output wire Saida_A, Saida_B, Saida_C, Saida_D, Saida_E, Saida_F, Saida_G;
+    output wire [6:0] SAIDA;
 
-    assign Saida_A = ~(NOTAS[0] & ~NOTAS[2]) | (NOTAS[2] & ~TOM) | (NOTAS[1] & ~TOM);
-    assign Saida_B = ~(~NOTAS[2] & NOTAS[1] & ~NOTAS[0]) | (~TOM & NOTAS[2] & ~NOTAS[1]) | (TOM & ~NOTAS[1] & NOTAS[0]) | (TOM & NOTAS[2] & NOTAS[0]);
-    assign Saida_C = ~(NOTAS[0] & ~TOM) | (~NOTAS[2] & ~NOTAS[1] & NOTAS[0]) | (NOTAS[2] & ~NOTAS[1] & ~NOTAS[0]);
-    assign Saida_D = ~(NOTAS[1] & TOM) | (NOTAS[2] & TOM) | (NOTAS[2] & NOTAS[1] & ~NOTAS[0]);
-    assign Saida_E = ~(NOTAS[1] & NOTAS[0]) | (~TOM & ~NOTAS[2] & NOTAS[1]) | (NOTAS[2] & ~NOTAS[1] & ~NOTAS[0]) | (TOM & NOTAS[2] & ~NOTAS[1]);
-    assign Saida_F = ~(~NOTAS[2] & NOTAS[1] & ~NOTAS[0]) | (NOTAS[2] & NOTAS[1] & TOM) | (NOTAS[2] & NOTAS[1] & NOTAS[0]) | (NOTAS[2] & NOTAS[0] & NOTAS[1]) | (NOTAS[2] & ~NOTAS[1] & ~NOTAS[0] & ~TOM) | (~NOTAS[2] & ~NOTAS[1] & NOTAS[0] & ~TOM);
-    assign Saida_G = ~(~NOTAS[2] & NOTAS[0]) | (NOTAS[1] & ~NOTAS[0]) | (TOM & NOTAS[2] & ~NOTAS[1]); 
+    assign SAIDA[6] = ~(NOTAS[0] & ~NOTAS[2]) | (NOTAS[2] & ~TOM_module) | (NOTAS[1] & ~TOM_module);
+    assign SAIDA[5] = ~(~NOTAS[2] & NOTAS[1] & ~NOTAS[0]) | (~TOM_module & NOTAS[2] & ~NOTAS[1]) | (TOM_module & ~NOTAS[1] & NOTAS[0]) | (TOM_module & NOTAS[2] & NOTAS[0]);
+    assign SAIDA[4] = ~(NOTAS[0] & ~TOM_module) | (~NOTAS[2] & ~NOTAS[1] & NOTAS[0]) | (NOTAS[2] & ~NOTAS[1] & ~NOTAS[0]);
+    assign SAIDA[3] = ~(NOTAS[1] & TOM_module) | (NOTAS[2] & TOM_module) | (NOTAS[2] & NOTAS[1] & ~NOTAS[0]);
+    assign SAIDA[2] = ~(NOTAS[1] & NOTAS[0]) | (~TOM_module & ~NOTAS[2] & NOTAS[1]) | (NOTAS[2] & ~NOTAS[1] & ~NOTAS[0]) | (TOM_module & NOTAS[2] & ~NOTAS[1]);
+    assign SAIDA[1] = ~(~NOTAS[2] & NOTAS[1] & ~NOTAS[0]) | (NOTAS[2] & NOTAS[1] & TOM_module) | (NOTAS[2] & NOTAS[1] & NOTAS[0]) | (NOTAS[2] & NOTAS[0] & NOTAS[1]) | (NOTAS[2] & ~NOTAS[1] & ~NOTAS[0] & ~TOM_module) | (~NOTAS[2] & ~NOTAS[1] & NOTAS[0] & ~TOM_module);
+    assign SAIDA[0] = ~(~NOTAS[2] & NOTAS[0]) | (NOTAS[1] & ~NOTAS[0]) | (TOM_module & NOTAS[2] & ~NOTAS[1]); 
 
 endmodule
 
