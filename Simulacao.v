@@ -6,7 +6,7 @@ module Simulacao ();
 
     reg TOM;
     reg [2:0] nota;
-    wire [6:0]Saida;
+    wire [6:0] Saida;
 
     // associa as entradas no modulo "module" às entradas neste arquivo principal
 
