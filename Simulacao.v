@@ -22,22 +22,22 @@ module Simulacao ();
         
         // Definindo os dados das entradas automaticamente
 
-            TOM = 0; nota = 3'b000;
-        #2; TOM = 0; nota = 3'b001;   
-        #2; TOM = 0; nota = 3'b010;     
-        #2; TOM = 0; nota = 3'b011;        
-        #2; TOM = 0; nota = 3'b100;    
-        #2; TOM = 0; nota = 3'b101;     
-        #2; TOM = 0; nota = 3'b110;      
-        #2; TOM = 0; nota = 3'b111;      
-        #2; TOM = 1; nota = 3'b000;      
-        #2; TOM = 1; nota = 3'b001;      
-        #2; TOM = 1; nota = 3'b010;           
-        #2; TOM = 1; nota = 3'b011;         
-        #2; TOM = 1; nota = 3'b100;        
-        #2; TOM = 1; nota = 3'b101;
-        #2; TOM = 1; nota = 3'b110;
-        #2; TOM = 1; nota = 3'b111;
+            TOM = b'0; nota = 3'b000;
+        #2; TOM = b'0; nota = 3'b001;   
+        #2; TOM = b'0; nota = 3'b010;     
+        #2; TOM = b'0; nota = 3'b011;        
+        #2; TOM = b'0; nota = 3'b100;    
+        #2; TOM = b'0; nota = 3'b101;     
+        #2; TOM = b'0; nota = 3'b110;      
+        #2; TOM = b'0; nota = 3'b111;      
+        #2; TOM = b'1; nota = 3'b000;      
+        #2; TOM = b'1; nota = 3'b001;      
+        #2; TOM = b'1; nota = 3'b010;           
+        #2; TOM = b'1; nota = 3'b011;         
+        #2; TOM = b'1; nota = 3'b100;        
+        #2; TOM = b'1; nota = 3'b101;
+        #2; TOM = b'1; nota = 3'b110;
+        #2; TOM = b'1; nota = 3'b111;
         #2;
     
         
