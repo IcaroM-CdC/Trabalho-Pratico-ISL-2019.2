@@ -12,16 +12,16 @@ module Simulacao ();
 
     ModuloDisp Display1 (.TOM_module(TOM), .NOTAS(nota), .SAIDA(Saida)); 
 
-    // os comandos abaixo são responsaveis por alternar entre 1's e 0's em um intervalo #2 de tempo
 
     initial begin
     
-        $dumpfile("SIM.vcd");
-        $dumpvars(0, Simulacao);
+        $dumpfile("SIM.vcd");       // comando que irá gerar o arquivo para o GTKwave
+        $dumpvars(0, Simulacao);    
         $monitor("%b%b, saida = %b", TOM, nota, Saida);
         
-        // Definindo os dados das entradas automaticamente
-
+        // Definindo o funcionamento das entradas.
+        // Elas irão se alterar a cada intervalo 2 de tempo.
+       
             TOM = b'0; nota = 3'b000;
         #2; TOM = b'0; nota = 3'b001;   
         #2; TOM = b'0; nota = 3'b010;     
@@ -39,8 +39,7 @@ module Simulacao ();
         #2; TOM = b'1; nota = 3'b110;
         #2; TOM = b'1; nota = 3'b111;
         #2;
-    
-        
+     
         $finish;
         
     end
