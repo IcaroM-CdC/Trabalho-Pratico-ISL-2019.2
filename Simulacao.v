@@ -17,27 +17,27 @@ module Simulacao ();
     
         $dumpfile("SIM.vcd");       // comando que irá gerar o arquivo para o GTKwave
         $dumpvars(0, Simulacao);    
-        $monitor("%b%b, saida = %b", TOM, nota, Saida);
+        $monitor("%b%b Saida = %b", TOM, nota, Saida);
         
         // Definindo o funcionamento das entradas.
         // Elas irão se alterar a cada intervalo 2 de tempo.
        
-            TOM = b'0; nota = 3'b000;
-        #2; TOM = b'0; nota = 3'b001;   
-        #2; TOM = b'0; nota = 3'b010;     
-        #2; TOM = b'0; nota = 3'b011;        
-        #2; TOM = b'0; nota = 3'b100;    
-        #2; TOM = b'0; nota = 3'b101;     
-        #2; TOM = b'0; nota = 3'b110;      
-        #2; TOM = b'0; nota = 3'b111;      
-        #2; TOM = b'1; nota = 3'b000;      
-        #2; TOM = b'1; nota = 3'b001;      
-        #2; TOM = b'1; nota = 3'b010;           
-        #2; TOM = b'1; nota = 3'b011;         
-        #2; TOM = b'1; nota = 3'b100;        
-        #2; TOM = b'1; nota = 3'b101;
-        #2; TOM = b'1; nota = 3'b110;
-        #2; TOM = b'1; nota = 3'b111;
+            TOM = 1'b0; nota = 3'b000;
+        #2; TOM = 1'b0; nota = 3'b001;   
+        #2; TOM = 1'b0; nota = 3'b010;     
+        #2; TOM = 1'b0; nota = 3'b011;        
+        #2; TOM = 1'b0; nota = 3'b100;    
+        #2; TOM = 1'b0; nota = 3'b101;     
+        #2; TOM = 1'b0; nota = 3'b110;      
+        #2; TOM = 1'b0; nota = 3'b111;      
+        #2; TOM = 1'b1; nota = 3'b000;      
+        #2; TOM = 1'b1; nota = 3'b001;      
+        #2; TOM = 1'b1; nota = 3'b010;           
+        #2; TOM = 1'b1; nota = 3'b011;         
+        #2; TOM = 1'b1; nota = 3'b100;        
+        #2; TOM = 1'b1; nota = 3'b101;
+        #2; TOM = 1'b1; nota = 3'b110;
+        #2; TOM = 1'b1; nota = 3'b111;
         #2;
      
         $finish;
