@@ -15,8 +15,7 @@ module Simulacao ();
 
     initial begin
     
-        $dumpfile("SIM.vcd");       // comando que irá gerar o arquivo para o GTKwave
-        $dumpvars(0, Simulacao);    
+        $dumpfile("SIM.vcd");       // comando que irá gerar o arquivo para o GTKwave    
         $monitor("%b%b Saida = %b", TOM, nota, Saida);
         
         // Definindo o funcionamento das entradas.
